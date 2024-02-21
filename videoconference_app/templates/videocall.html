@@ -24,17 +24,11 @@ window.onload = function () {
     }
 
 
-        // Generate a Token by calling a method.
-        // @param 1: appID
-        // @param 2: serverSecret
-        // @param 3: Room ID
-        // @param 4: User ID
-        // @param 5: Username
     const roomID = getUrlParams(window.location.href)['roomID'] || (Math.floor(Math.random() * 10000) + "");
     const userID = Math.floor(Math.random() * 10000) + "";
     const userName = "{{ name }}";
-    const appID = 1633966294;
-    const serverSecret = "7a6e1fb9e2936438765a4a8f1e48d231";
+    const appID = 1432189550;
+    const serverSecret = "c27065315cc28d372c23917fdc5b2fa3";
     const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, roomID, userID, userName);
 
     
@@ -49,17 +43,17 @@ window.onload = function () {
                 mode: ZegoUIKitPrebuilt.VideoConference,
             },
                 
-           	turnOnMicrophoneWhenJoining: false,
-           	turnOnCameraWhenJoining: false,
+           	turnOnMicrophoneWhenJoining: true,
+           	turnOnCameraWhenJoining: true,
            	showMyCameraToggleButton: true,
            	showMyMicrophoneToggleButton: true,
            	showAudioVideoSettingsButton: true,
            	showScreenSharingButton: true,
            	showTextChat: true,
            	showUserList: true,
-           	maxUsers: 50,
+           	maxUsers: 100,
            	layout: "Auto",
-           	showLayoutButton: false,
+           	showLayoutButton: true,
          
             });
 }
